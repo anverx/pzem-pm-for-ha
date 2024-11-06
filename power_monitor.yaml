@@ -1,0 +1,69 @@
+esphome:
+  name: waterheater-monitor
+  comment: "Measure energy consumption using PZEM 004T"
+  friendly_name: Waterheater Monitor
+
+# substitutions:
+#   device_description: "Measure energy consumption using PZEM 004T"
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: !secret api_key
+
+ota:
+  platform: esphome  
+  password: !secret ota_password
+
+wifi:  
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Waterheater-Monitor"
+    password: !secret hotspot_password
+
+uart:
+  rx_pin: 16
+  tx_pin: 17
+  baud_rate: 9600
+
+modbus:
+
+sensor:
+  - platform: pzemac
+    current:
+      name: "Waterheater Current"
+    voltage:
+      name: "Waterheater Voltage"
+    energy:
+      name: "Waterheater Energy"
+    power:
+      name: "Waterheater Power"
+    frequency:
+      name: "Waterheater Frequency"
+    power_factor:
+      name: "Waterheater Power Factor"
+    update_interval: 60s
+    
+
+web_server:
+  port: 80
+
+
+esp32_ble_tracker:
+  scan_parameters:
+    interval: 1100ms
+    window: 1100ms    
+    active: true
+
+bluetooth_proxy:
