@@ -14,7 +14,7 @@ Instuctions for assembly of a power monitor device and integrating it with the H
 
 
 ## Assembly
-Please do not attmept this if you are not comfortable with high voltage.  In many countries even attaching this thing to anying live requires a certified electrician.
+Please do not attempt this if you are not comfortable working with high voltage!  In many countries even attaching this thing to anying live requires a certified electrician.  Know and follow your local regulations and stay safe.
 
 3D print the enclosure and the lid, find stl files in the CAD folder.
 
