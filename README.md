@@ -15,6 +15,7 @@ Instuctions for assembly of a power monitor device and integrating it with the H
 
 ## Assembly
 
+3D print the enclosure and the lid, find stl files in the CAD folder.
 
 ## Configuration and integration
 Initialize the device as normal in ESPHome, then paste the following configuration.  Mind the secrets.
