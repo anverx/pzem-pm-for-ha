@@ -1,20 +1,32 @@
-# pzem-pm-for-ha
+# ESP32 - PZEM power monitor for Home Assistant
+
+
+![Alt text](./images/pzem2.jpg "Overview")
+
+## Disclaimer
+```diff
+- Please do not attempt this if you are not comfortable working with high voltage!  
+- In many countries even attaching this thing to anying live requires a certified electrician.  
+- Know and follow your local regulations and stay safe.
+```
+
+## Intro
 Instuctions for assembly of a power monitor device and integrating it with the Home Assistant
 
-![Alt text](./images/pzem1.jpg "Overview")
-## Intro
-
 ## BOM
-
+Here is a list of components you will need for this project.  All the electonic components can be easily found on Aliexpress.
 | Component | Part name | Estimated Price (€) |
 | --- | --- | --- |
 | PZEM |  PZEM-004T | 6 |
 | ESP32 | LOLIN32 | 3 |
 | 3V power supply|Hi Link HLK-2M03 | 1.8 |
+| Enclosure(2 parts)| 3D printed | 0 |
+| Some wire and solder| | |
 
 
 ## Assembly
-Please do not attempt this if you are not comfortable working with high voltage!  In many countries even attaching this thing to anying live requires a certified electrician.  Know and follow your local regulations and stay safe.
+![Alt text](./images/pzem1.jpg "Overview")
+
 
 3D print the enclosure and the lid, find stl files in the CAD folder.
 
